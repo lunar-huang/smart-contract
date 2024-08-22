@@ -1,0 +1,12 @@
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+<div id ="block-number">Loading block number...</div>
+
+<script>
+    console.log("connecting to sepolia .........")
+    const web3= new Web3(
+        new Web3.providers.HttpProvider('https://sepolia.infura.io/v3/a2f188a2d48c4422a2d84c08231d5db9'));
+        
+    web3.eth.getBlockNumber().then( b => {console.log(b)});
+    web3.eth.getBlockNumber().then( b => {document.getElementById("block-number").innerText=b});
+</script>
